@@ -1,0 +1,1341 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sociedad Intercultural HINODE AQP | Centro Cultural Japonés en Arequipa</title>
+    <meta name="description" content="Aprende japonés en Arequipa con la Sociedad Intercultural HINODE AQP. Descubre nuestro centro cultural japonés, clases de japonés presenciales y virtuales, festivales, videojuegos retro y club de juegos de mesa.">
+    <meta name="keywords" content="centro cultural japones, comunidad japonesa Arequipa, actividades culturales japonesas, festival japones AQP, eventos de cultura japonesa Arequipa, aprender japones Arequipa, estudiar japones en Arequipa, clases japones Arequipa, donde jugar juegos mesa Arequipa">
+    
+    <!-- Open Graph for Social Media -->
+    <meta property="og:title" content="Sociedad Intercultural HINODE AQP | Centro Cultural Japonés">
+    <meta property="og:description" content="Enseñanza del país Japón, a través de su idioma y cultura en el corazón de Arequipa. Cursos, eventos y entretenimiento retro.">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_PE">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* --- VARIABLES DE COLOR Y ESTILO JAPONÉS --- */
+        :root {
+            --bg-color: #ffffff;
+            --text-main: #1a1a1a;
+            --text-muted: #555555;
+            --primary-red: #e60012;      /* Rojo Sol Naciente */
+            --primary-dark: #b3000e;
+            --sakura-pink: #ffb7c5;      /* Rosa Cerezo */
+            --sakura-light: #fff0f2;     /* Fondo sutil rosado */
+            --dark-accent: #111111;
+            --gray-light: #f9f9f9;
+            --gray-border: #e0e0e0;
+            --font-jp: 'Noto Sans JP', sans-serif;
+            --font-sans: 'Poppins', sans-serif;
+            --transition: all 0.3s ease;
+        }
+
+        /* --- RESET Y CONFIGURACIÓN BASE --- */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+            font-size: 16px;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        h1, h2, h3, h4 {
+            font-family: var(--font-jp);
+            font-weight: 700;
+            color: var(--primary-red);
+            line-height: 1.2;
+        }
+
+        p {
+            color: var(--text-muted);
+            margin-bottom: 1rem;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        /* --- BOTONES Y CTAs --- */
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 14px 28px;
+            font-weight: 600;
+            border-radius: 50px;
+            transition: var(--transition);
+            cursor: pointer;
+            border: 2px solid transparent;
+            font-size: 0.95rem;
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-red);
+            color: #ffffff;
+            box-shadow: 0 4px 15px rgba(230, 0, 18, 0.3);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--dark-accent);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            border-color: var(--primary-red);
+            color: var(--primary-red);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--sakura-light);
+            color: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-whatsapp {
+            background-color: #25d366;
+            color: white;
+            border: none;
+        }
+        .btn-whatsapp:hover {
+            background-color: #128c7e;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.3);
+        }
+
+        /* --- HEADER Y NAVEGACIÓN --- */
+        header {
+            position: sticky;
+            top: 0;
+            background-color: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 20px rgba(0,0,0,0.05);
+            z-index: 1000;
+            backdrop-filter: blur(5px);
+        }
+
+        .header-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo-circle {
+            width: 35px;
+            height: 35px;
+            background-color: var(--primary-red);
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .logo-text {
+            font-family: var(--font-jp);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--dark-accent);
+            letter-spacing: -0.5px;
+        }
+
+        .logo-text span {
+            color: var(--primary-red);
+        }
+
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-link {
+            font-weight: 500;
+            color: var(--text-main);
+            font-size: 0.95rem;
+            position: relative;
+            padding: 5px 0;
+        }
+
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-red);
+            transition: var(--transition);
+        }
+
+        .nav-link:hover {
+            color: var(--primary-red);
+        }
+
+        .nav-link:hover::after {
+            width: 100%;
+        }
+
+        /* Menú Hamburguesa Móvil */
+        .menu-toggle {
+            display: none;
+            flex-direction: column;
+            gap: 6px;
+            cursor: pointer;
+            border: none;
+            background: transparent;
+            padding: 5px;
+        }
+
+        .menu-toggle span {
+            width: 28px;
+            height: 3px;
+            background-color: var(--dark-accent);
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            position: relative;
+            padding: 120px 0 100px 0;
+            background: linear-gradient(135deg, #ffffff 60%, var(--sakura-light) 100%);
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: "日の出";
+            position: absolute;
+            right: -5%;
+            top: 5%;
+            font-family: var(--font-jp);
+            font-size: 18rem;
+            color: rgba(255, 183, 197, 0.15);
+            font-weight: 700;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        .hero-content {
+            max-width: 700px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background-color: var(--sakura-light);
+            border: 1px solid var(--sakura-pink);
+            color: var(--primary-dark);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 24px;
+            color: var(--dark-accent);
+        }
+
+        .hero h1 span {
+            color: var(--primary-red);
+            position: relative;
+            display: inline-block;
+        }
+
+        .hero-p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            font-weight: 400;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        /* --- SECCIÓN NOSOTROS --- */
+        .section-padding {
+            padding: 100px 0;
+        }
+
+        .section-title-wrapper {
+            text-align: center;
+            margin-bottom: 60px;
+            position: relative;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            color: var(--dark-accent);
+            margin-bottom: 15px;
+            display: inline-block;
+        }
+
+        .section-subtitle {
+            font-size: 1rem;
+            color: var(--primary-red);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+        }
+
+        .title-line {
+            width: 60px;
+            height: 3px;
+            background-color: var(--primary-red);
+            margin: 15px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        .nosotros-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            align-items: center;
+        }
+
+        .nosotros-cards {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+            gap: 25px;
+        }
+
+        .nosotros-card {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            border-left: 4px solid var(--primary-red);
+            transition: var(--transition);
+        }
+
+        .nosotros-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(230, 0, 18, 0.05);
+        }
+
+        .nosotros-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 12px;
+            color: var(--dark-accent);
+        }
+
+        .nosotros-card p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+        }
+
+        .nosotros-banner {
+            background: linear-gradient(135deg, var(--primary-red) 0%, var(--dark-accent) 100%);
+            color: white;
+            padding: 50px;
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.1);
+        }
+
+        .nosotros-banner::after {
+            content: "龢";
+            position: absolute;
+            font-size: 15rem;
+            color: rgba(255,255,255,0.05);
+            bottom: -50px;
+            right: -20px;
+            font-family: var(--font-jp);
+        }
+
+        .nosotros-banner h3 {
+            color: #ffffff;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+        }
+
+        .nosotros-banner p {
+            color: rgba(255,255,255,0.9);
+            font-size: 1.05rem;
+        }
+
+        /* --- SECCIÓN 1: EVENTOS --- */
+        .bg-light {
+            background-color: var(--gray-light);
+        }
+
+        .eventos-tabs-container {
+            margin-top: 40px;
+        }
+
+        .eventos-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 30px;
+        }
+
+        .event-group-title {
+            grid-column: 1 / -1;
+            font-size: 1.4rem;
+            color: var(--dark-accent);
+            border-bottom: 2px solid var(--sakura-pink);
+            padding-bottom: 8px;
+            margin-top: 20px;
+            margin-bottom: 10px;
+        }
+
+        .event-card {
+            background: #ffffff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.03);
+            border: 1px solid var(--gray-border);
+            display: flex;
+            flex-direction: column;
+            transition: var(--transition);
+        }
+
+        .event-card:hover {
+            box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+            border-color: var(--sakura-pink);
+        }
+
+        .event-card-body {
+            padding: 30px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .event-tag {
+            align-self: flex-start;
+            background-color: var(--sakura-light);
+            color: var(--primary-red);
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 12px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+        }
+
+        .event-card h4 {
+            color: var(--dark-accent);
+            font-size: 1.25rem;
+            margin-bottom: 12px;
+        }
+
+        .event-meta {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            margin-bottom: 15px;
+            display: flex;
+            gap: 15px;
+        }
+
+        .event-meta span i {
+            color: var(--primary-red);
+            margin-right: 5px;
+        }
+
+        /* --- SECCIÓN 2: CURSOS --- */
+        .cursos-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .curso-card {
+            background-color: #ffffff;
+            border: 1px solid var(--gray-border);
+            border-radius: 16px;
+            padding: 40px 30px;
+            text-align: center;
+            transition: var(--transition);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+        .curso-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(230, 0, 18, 0.08);
+            border-color: var(--primary-red);
+        }
+
+        .curso-card.featured {
+            border: 2px solid var(--primary-red);
+            background: linear-gradient(180deg, #ffffff 0%, var(--sakura-light) 100%);
+        }
+
+        .curso-badge {
+            position: absolute;
+            top: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: var(--primary-red);
+            color: white;
+            padding: 4px 18px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        .curso-card h4 {
+            font-size: 1.5rem;
+            color: var(--dark-accent);
+            margin-bottom: 10px;
+        }
+
+        .curso-sub {
+            font-size: 0.9rem;
+            color: var(--primary-red);
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+
+        .curso-features {
+            margin: 25px 0;
+            text-align: left;
+        }
+
+        .curso-features li {
+            font-size: 0.95rem;
+            color: var(--text-muted);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .curso-features li::before {
+            content: "✓";
+            color: var(--primary-red);
+            font-weight: bold;
+        }
+
+        /* --- SECCIÓN 3: ENTRETENIMIENTO --- */
+        .entretenimiento-intro {
+            max-width: 700px;
+            margin: 0 auto 50px auto;
+            text-align: center;
+        }
+
+        .entretenimiento-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+        }
+
+        .ent-box {
+            background-color: #ffffff;
+            border-radius: 20px;
+            padding: 45px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+            border: 1px solid var(--gray-border);
+            position: relative;
+            transition: var(--transition);
+        }
+
+        .ent-box:hover {
+            box-shadow: 0 15px 35px rgba(0,0,0,0.06);
+            border-color: var(--sakura-pink);
+        }
+
+        .ent-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .ent-box h3 {
+            font-size: 1.6rem;
+            color: var(--dark-accent);
+            margin-bottom: 15px;
+        }
+
+        .ent-box ul {
+            margin-top: 20px;
+        }
+
+        .ent-box ul li {
+            font-size: 0.95rem;
+            margin-bottom: 8px;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .ent-box ul li::before {
+            content: "•";
+            color: var(--primary-red);
+            font-size: 1.5rem;
+            line-height: 0;
+        }
+
+        /* --- CONTACTO Y FORMULARIO --- */
+        .contacto-grid {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 50px;
+        }
+
+        .info-contacto {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .info-item {
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+
+        .info-icon {
+            background-color: var(--sakura-light);
+            color: var(--primary-red);
+            width: 50px;
+            height: 50px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+            flex-shrink: 0;
+        }
+
+        .info-text h4 {
+            color: var(--dark-accent);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .info-text p {
+            margin-bottom: 0;
+            font-size: 0.95rem;
+            white-space: pre-line;
+        }
+
+        .map-placeholder {
+            width: 100%;
+            height: 220px;
+            background-color: #eee;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+            margin-top: 20px;
+            border: 1px solid var(--gray-border);
+        }
+
+        .map-placeholder iframe {
+            width: 100%;
+            height: 100%;
+            border: 0;
+        }
+
+        .formulario-contacto {
+            background-color: #ffffff;
+            padding: 40px;
+            border-radius: 16px;
+            box-shadow: 0 10px 35px rgba(0,0,0,0.04);
+            border: 1px solid var(--gray-border);
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--dark-accent);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid var(--gray-border);
+            border-radius: 8px;
+            font-family: var(--font-sans);
+            font-size: 0.95rem;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: var(--primary-red);
+            box-shadow: 0 0 0 3px rgba(230, 0, 18, 0.1);
+        }
+
+        select.form-control {
+            cursor: pointer;
+        }
+
+        textarea.form-control {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .form-status {
+            margin-top: 15px;
+            padding: 10px;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            display: none;
+        }
+        .form-status.success {
+            display: block;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            background-color: var(--dark-accent);
+            color: #ffffff;
+            padding: 60px 0 30px 0;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h4 {
+            color: #ffffff;
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            color: #aaaaaa;
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+
+        .footer-links h5 {
+            color: var(--sakura-pink);
+            font-size: 1.1rem;
+            margin-bottom: 18px;
+            font-family: var(--font-jp);
+        }
+
+        .footer-links ul {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: #cccccc;
+            font-size: 0.9rem;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary-red);
+            padding-left: 5px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .social-icon {
+            width: 36px;
+            height: 36px;
+            background-color: #222222;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 0.9rem;
+            color: #ffffff;
+            border: 1px solid #333333;
+        }
+
+        .social-icon:hover {
+            background-color: var(--primary-red);
+            color: white;
+            border-color: var(--primary-red);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #222222;
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.85rem;
+            color: #777777;
+        }
+
+        /* --- RESPONSIVIDAD (MEDIA QUERIES) --- */
+        @media (max-width: 992px) {
+            html { font-size: 15px; }
+            .nosotros-grid, .contacto-grid {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .cursos-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .hero h1 { font-size: 2.6rem; }
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: flex;
+                z-index: 1001;
+            }
+
+            .nav-menu {
+                position: fixed;
+                top: 0;
+                right: -100%;
+                width: 280px;
+                height: 100vh;
+                background-color: #ffffff;
+                box-shadow: -5px 0 30px rgba(0,0,0,0.1);
+                flex-direction: column;
+                padding: 100px 40px;
+                gap: 25px;
+                transition: var(--transition);
+                z-index: 1000;
+            }
+
+            .nav-menu.active {
+                right: 0;
+            }
+
+            .menu-toggle.active span:nth-child(1) {
+                transform: rotate(45deg) translate(6px, 6px);
+            }
+            .menu-toggle.active span:nth-child(2) {
+                opacity: 0;
+            }
+            .menu-toggle.active span:nth-child(3) {
+                transform: rotate(-45deg) translate(6px, -7px);
+            }
+
+            .hero { padding: 80px 0 60px 0; }
+            .hero h1 { font-size: 2.2rem; }
+            .eventos-grid, .cursos-grid, .entretenimiento-grid, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid { gap: 30px; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- HEADER / NAVEGACIÓN -->
+    <header>
+        <div class="container header-container">
+            <a href="#" class="logo" aria-label="HINODE AQP Home">
+                <span class="logo-circle"></span>
+                <span class="logo-text">HINODE <span>AQP</span></span>
+            </a>
+            
+            <button class="menu-toggle" id="mobile-menu-btn" aria-label="Abrir menú de navegación">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+
+            <nav class="nav-menu" id="nav-links">
+                <a href="#nosotros" class="nav-link">Nosotros</a>
+                <a href="#eventos" class="nav-link">Eventos</a>
+                <a href="#cursos" class="nav-link">Cursos</a>
+                <a href="#entretenimiento" class="nav-link">Entretenimiento</a>
+                <a href="#contacto" class="nav-link">Contacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-badge">Centro Cultural Japonés</span>
+                    <h1>Comunidad Japonesa en Arequipa: Tu puente al Sol Naciente</h1>
+                    <p class="hero-p">En de la Sociedad Intercultural HINODE AQP te ofrecemos una verdadera experiencia de enseñanza del país Japón, a través del idioma y cultura.</p>
+                    <div class="hero-actions">
+                        <a href="https://wa.me/51951228830?text=Hola%20HINODE%20AQP,%20deseo%20solicitar%20información%20sobre%20las%20clases%20de%20japonés." target="_blank" rel="noopener" class="btn btn-primary btn-whatsapp">
+                            <svg width="20" height="20" fill="currentColor" style="margin-right:8px; vertical-align:middle;" viewBox="0 0 16 16">
+                                <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.933 7.933 0 0 0 3.79.907h.003r4-4.374a7.859 7.859 0 0 0 5.604-5.594 7.88 7.88 0 0 0-2.24-5.583zm-5.604 11.9a6.573 6.573 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.69-4.982c-.193-.097-1.14-.561-1.318-.627-.179-.065-.308-.097-.437.097-.129.194-.5.627-.613.751-.114.124-.228.14-.421.043-.193-.096-.815-.301-1.552-.959-.572-.51-1.007-1.14-1.119-1.332-.114-.194-.012-.299.085-.395.088-.087.194-.228.291-.34.1-.114.133-.194.199-.324.066-.13.033-.242-.016-.34-.049-.097-.437-1.053-.6-1.451-.158-.385-.317-.333-.437-.34-.112-.006-.24-.006-.368-.006-.128 0-.337.048-.513.24-.176.192-.672.656-.672 1.6 0 .943.687 1.855.783 1.981.096.127 1.349 2.062 3.268 2.891.457.197.813.315 1.092.404.459.146.877.126 1.209.077.37-.055 1.14-.466 1.301-.917.161-.452.161-.839.113-.918-.049-.079-.179-.126-.372-.224z"/>
+                            </svg> Contactar por WhatsApp
+                        </a>
+                        <a href="#cursos" class="btn btn-secondary">Ver Clases de Japonés</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN NOSOTROS -->
+        <section id="nosotros" class="section-padding">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-subtitle">¿Quiénes Somos?</span>
+                    <h2 class="section-title">Comunidad Japonesa Arequipa</h2>
+                    <div class="title-line"></div>
+                </div>
+                
+                <div class="nosotros-grid">
+                    <div class="nosotros-cards">
+                        <div class="nosotros-card">
+                            <h3>Nuestra Misión</h3>
+                            <p>Brindar una formación integral de excelencia en el idioma japonés, conectando a jóvenes y adultos de Arequipa con las tradiciones y la modernidad del país nipón mediante actividades culturales japonesas inmersivas.</p>
+                        </div>
+                        <div class="nosotros-card">
+                            <h3>Nuestra Visión</h3>
+                            <p>Ser el centro cultural japonés de referencia en el sur del Perú, reconocido por nuestra calidad metodológica y por consolidar una comunidad apasionada por el intercambio intercultural continuo.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="nosotros-banner">
+                        <h3>¿Por qué elegir HINODE AQP?</h3>
+                        <p>No somos solo una academia tradicional. Combinamos el rigor académico exigido para certificar el idioma con talleres vivenciales de caligrafía, artes, gastronomía, eventos y áreas recreativas exclusivas.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 1: EVENTOS -->
+        <section id="eventos" class="section-padding bg-light">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-subtitle">Actividades Destacadas</span>
+                    <h2 class="section-title">Festival Japonés AQP y Cultura</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <p style="text-align: center; max-width: 650px; margin: -40px auto 40px auto;">Participa en los principales eventos de cultura japonesa Arequipa. Una vitrina única para vivir el manga, anime, música y tradiciones milenarias.</p>
+
+                <div class="eventos-tabs-container">
+                    <div class="eventos-grid">
+                        
+                        <!-- Próximos Eventos -->
+                        <div class="event-group-title">Agenda: Cultura Japonesa Arequipa (Próximos Eventos)</div>
+                        
+                        <div class="event-card">
+                            <div class="event-card-body">
+                                <div>
+                                    <span class="event-tag">Calendario de Eventos Hinode</span>
+                                    <h4>Mini Matsuri de Invierno 2026</h4>
+                                    <p>Un festival japonés AQP dedicado a las costumbres tradicionales de la estación fría. Contaremos con stands gastronómicos, ceremonia del té y proyecciones especiales.</p>
+                                </div>
+                                <div class="event-meta">
+                                    <span><strong>Fecha:</strong> Próximamente / Julio 2026</span>
+                                    <span><strong>Lugar:</strong> Sede Central</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-card-body">
+                                <div>
+                                    <span class="event-tag">Talleres Vivenciales</span>
+                                    <h4>Taller Práctico de Shodō (Caligrafía Japonesa)</h4>
+                                    <p>Aprende el arte de la escritura con pincel y tinta china guiado por instructores especializados en arte oriental.</p>
+                                </div>
+                                <div class="event-meta">
+                                    <span><strong>Fecha:</strong> Sábado Alternos</span>
+                                    <span><strong>Modalidad:</strong> Presencial</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Eventos Anteriores -->
+                        <div class="event-group-title">Eventos Pasados (Galería de Eventos Hinode)</div>
+
+                        <div class="event-card">
+                            <div class="event-card-body">
+                                <div>
+                                    <span class="event-tag">Edición Pasada</span>
+                                    <h4>Gran Festival Japonés AQP Hanami 2025</h4>
+                                    <p>Celebración masiva en primavera con más de 300 asistentes. Disfrutamos de exhibiciones de Kendo, cosplay, música en vivo y gastronomía tradicional nikkei.</p>
+                                </div>
+                                <div class="event-meta">
+                                    <span><strong>Estado:</strong> Concluido con Éxito</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="event-card">
+                            <div class="event-card-body">
+                                <div>
+                                    <span class="event-tag">Torneo Comunitario</span>
+                                    <h4>I Campeonato de Juegos de Mesa Orientales</h4>
+                                    <p>Reunión masiva de la comunidad para competir en juegos tradicionales como el Go y Shogi, promoviendo el pensamiento estratégico analítico.</p>
+                                </div>
+                                <div class="event-meta">
+                                    <span><strong>Estado:</strong> Concluido</span>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: CURSOS -->
+        <section id="cursos" class="section-padding">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-subtitle">Estudiar Japonés en Arequipa</span>
+                    <h2 class="section-title">Aprender Japonés Arequipa</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="cursos-grid">
+                    
+                    <!-- Curso 1 -->
+                    <div class="curso-card">
+                        <div>
+                            <h4>Básico (N5)</h4>
+                            <div class="curso-sub">Clases Japonés Arequipa Presencial</div>
+                            <p>Ideal para principiantes absolutos. Aprende la lectura de Hiragana, Katakana y tus primeros caracteres Kanji fundamentales de forma didáctica.</p>
+                            <ul class="curso-features">
+                                <li><strong>Horarios:</strong> Lun, Mié y Vie de 4:00 pm a 5:30 pm</li>
+                                <li>Materiales de estudio incluidos</li>
+                                <li>Certificación interna de nivel</li>
+                            </ul>
+                        </div>
+                        <a href="#contacto" class="btn btn-secondary" onclick="seleccionarCurso('Básico N5 Presencial')">Matrícula Curso de Japonés</a>
+                    </div>
+
+                    <!-- Curso 2 (Destacado) -->
+                    <div class="curso-card featured">
+                        <span class="curso-badge">¡Más Solicitado!</span>
+                        <div>
+                            <h4>Intermedio (N4-N3)</h4>
+                            <div class="curso-sub">Clases Japonés Arequipa Avanzado</div>
+                            <p>Desarrolla fluidez conversacional intermedia y domina estructuras gramaticales avanzadas preparándote con éxito para el examen oficial JLPT.</p>
+                            <ul class="curso-features">
+                                <li><strong>Horarios:</strong> Mar y Jue de 6:00 pm a 8:00 pm</li>
+                                <li>Enfoque 100% conversacional</li>
+                                <li>Simulacros JLPT recurrentes</li>
+                            </ul>
+                        </div>
+                        <a href="#contacto" class="btn btn-primary" onclick="seleccionarCurso('Intermedio JLPT')">Matrícula Curso de Japonés</a>
+                    </div>
+
+                    <!-- Curso 3 -->
+                    <div class="curso-card">
+                        <div>
+                            <h4>Aprender Japonés Virtual</h4>
+                            <div class="curso-sub">Modalidad Online Sincrónica</div>
+                            <p>Accede desde cualquier rincón del país con sesiones completamente en vivo vía Zoom guiadas por docentes con experiencia internacional nativa.</p>
+                            <ul class="curso-features">
+                                <li><strong>Horarios:</strong> Sábados intensivos de 2:00 pm a 6:00 pm</li>
+                                <li>Clases grabadas disponibles 24/7</li>
+                                <li>Plataforma educativa interactiva</li>
+                            </ul>
+                        </div>
+                        <a href="#contacto" class="btn btn-secondary" onclick="seleccionarCurso('Virtual Intensivo')">Matrícula Curso de Japonés</a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: ENTRETENIMIENTO -->
+        <section id="entretenimiento" class="section-padding bg-light">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-subtitle">Espacio Recreativo Intercultural</span>
+                    <h2 class="section-title">¿Dónde Jugar Juegos de Mesa en Arequipa?</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="entretenimiento-intro">
+                    <p>En el corazón de nuestro centro cultural disponemos de zonas recreativas exclusivas diseñadas para compartir, relajarte y pasar grandes momentos junto al mejor ecosistema gamer y analógico de la ciudad.</p>
+                </div>
+
+                <div class="entretenimiento-grid">
+                    
+                    <!-- Caja Retro -->
+                    <div class="ent-box">
+                        <div class="ent-icon">🕹️</div>
+                        <h3>Lugar de Juegos Retro</h3>
+                        <p>Disponemos de un rincón de preservación digital de <strong>videojuegos antiguos Arequipa</strong>. Ven a redescubrir los títulos clásicos japoneses que marcaron historia en la industria del entretenimiento.</p>
+                        <ul>
+                            <li>Consolas legendarias: Famicom, Super Famicom y Sega Mega Drive.</li>
+                            <li>Títulos icónicos en hardware y cartuchos totalmente originales.</li>
+                            <li>Acceso totalmente libre para alumnos matriculados.</li>
+                        </ul>
+                    </div>
+
+                    <!-- Caja Ludoteca -->
+                    <div class="ent-box">
+                        <div class="ent-icon">🎲</div>
+                        <h3>Club de Juegos de Mesa Arequipa</h3>
+                        <p>Únete a nuestra vibrante <strong>comunidad de juegos de mesa Arequipa</strong>. Contamos con una selecta ludoteca en Arequipa que mezcla propuestas clásicas de Japón y los eurogames modernos de alta estrategia.</p>
+                        <ul>
+                            <li>Estrategia tradicional asiática: Go, Shogi, Hanafuda.</li>
+                            <li>Eurogames modernos y Party games temáticos para socializar.</li>
+                            <li>Tardes de juegos temáticas abiertas al público general todas las semanas.</li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN CONTACTO -->
+        <section id="contacto" class="section-padding">
+            <div class="container">
+                <div class="section-title-wrapper">
+                    <span class="section-subtitle">¿Listo para Iniciar?</span>
+                    <h2 class="section-title">Contacto HINODE AQP</h2>
+                    <div class="title-line"></div>
+                </div>
+
+                <div class="contacto-grid">
+                    
+                    <!-- Información Izquierda -->
+                    <div class="info-contacto">
+                        <h3>Información del Centro Cultural Japonés Arequipa</h3>
+                        <p>Comunícate directamente con nosotros o visítanos en nuestras instalaciones físicas en la zona centro histórica de la ciudad.</p>
+                        
+                        <div class="info-item">
+                            <div class="info-icon">📍</div>
+                            <div class="info-text">
+                                <h4>Dirección Hinode Arequipa</h4>
+                                <p>Calle Rivero, Centro 408, Interior Tercer piso, oficina 20<br>Arequipa, Perú</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">📞</div>
+                            <div class="info-text">
+                                <h4>Teléfono Centro Cultural Japonés</h4>
+                                <p>Fijo: (054) 662382<br>WhatsApp: +51 951 228 830</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">✉️</div>
+                            <div class="info-text">
+                                <h4>Correo Electrónico</h4>
+                                <p>hinodeaqp@gmail.com</p>
+                            </div>
+                        </div>
+
+                        <div class="info-item">
+                            <div class="info-icon">🕒</div>
+                            <div class="info-text">
+                                <h4>Horario de Atención</h4>
+                                <p>Lunes: 12:00 pm a 7:00 pm<br>Martes a Sábado: 12:00 pm a 8:00 pm</p>
+                            </div>
+                        </div>
+
+                        <!-- Placeholder Ubicación Google Maps -->
+                        <div class="map-placeholder">
+                            <!-- Mapa integrado real simplificado para máxima velocidad de carga. Reemplazar src por tu iframe final -->
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m12!1m3!1d3824.23842637257!2d-71.5348882!3d-16.3974443!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x91424b3017a7a5d7%3A0x7d0a271181f7fdfb!2sCalle%20Rivero%20408%2C%20Arequipa%2004001!5e0!3m2!1ses-419!2spe!4v1700000000000!5m2!1ses-419!2spe" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        </div>
+                    </div>
+
+                    <!-- Formulario Derecha -->
+                    <div class="formulario-contacto">
+                        <h3>Solicitar Inscripción</h3>
+                        <p style="font-size:0.9rem; margin-bottom: 25px;">Completa tus datos y nos comunicaremos contigo de inmediato para finalizar tu matrícula de curso de japonés.</p>
+                        
+                        <form id="leadForm" onsubmit="handleFormSubmit(event)">
+                            <div class="form-group">
+                                <label for="nombre">Nombre Completo</label>
+                                <input type="text" id="nombre" class="form-control" placeholder="Ej. Juan Pérez" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="correo">Correo Electrónico</label>
+                                <input type="email" id="correo" class="form-control" placeholder="juan@ejemplo.com" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="telefono">Teléfono / WhatsApp</label>
+                                <input type="tel" id="telefono" class="form-control" placeholder="Ej. +51 900 000 000" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="programa">Programa de Interés</label>
+                                <select id="programa" class="form-control">
+                                    <option value="Básico N5 Presencial">Curso Básico (N5) - Presencial</option>
+                                    <option value="Intermedio JLPT">Curso Intermedio (N4-N3) - Presencial</option>
+                                    <option value="Virtual Intensivo">Aprender Japonés Virtual - Sincrónico</option>
+                                    <option value="Eventos Recreativos">Eventos y Club de Juegos</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje o Consultas Adicionales</label>
+                                <textarea id="mensaje" class="form-control" placeholder="Escribe aquí tus preguntas respecto al inicio de clases..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">Enviar Solicitud por Correo / WhatsApp</button>
+                            
+                            <div class="form-status" id="form-message"></div>
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                
+                <div class="footer-brand">
+                    <h4>HINODE AQP</h4>
+                    <p>Sociedad Intercultural dedicada a expandir la magia del idioma y la milenaria cultura de Japón en toda la región de Arequipa.</p>
+                    <div class="footer-social">
+                        <a href="https://facebook.com" target="_blank" rel="noopener" class="social-icon" aria-label="Facebook">FB</a>
+                        <a href="https://instagram.com" target="_blank" rel="noopener" class="social-icon" aria-label="Instagram">IG</a>
+                        <a href="https://wa.me/51951228830" target="_blank" rel="noopener" class="social-icon" aria-label="WhatsApp">WA</a>
+                    </div>
+                </div>
+
+                <div class="footer-links">
+                    <h5>Enlaces Rápidos</h5>
+                    <ul>
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                        <li><a href="#eventos">Eventos Culturales</a></li>
+                        <li><a href="#cursos">Cursos de Japonés</a></li>
+                        <li><a href="#entretenimiento">Ludoteca y Retro</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h5>Palabras Clave</h5>
+                    <p style="font-size: 0.8rem; color: #777777; line-height: 1.4;">
+                        Centro cultural japonés Arequipa, aprender japonés presencial y virtual, comunidad de juegos de mesa, festival japonés AQP, actividades culturales tradicionales.
+                    </p>
+                </div>
+
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2026 Sociedad Intercultural HINODE AQP. Todos los derechos reservados. Diseñado con enfoque SEO Avanzado.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- INTERACTIVIDAD CON JAVASCRIPT VANILLA -->
+    <script>
+        // --- MENÚ MÓVIL DESPLEGABLE ---
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const navLinks = document.getElementById('nav-links');
+
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenuBtn.classList.toggle('active');
+            navLinks.classList.toggle('active');
+        });
+
+        // Cerrar menú al hacer click en cualquier link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenuBtn.classList.remove('active');
+                navLinks.classList.remove('active');
+            });
+        });
+
+        // --- SELECCIONAR CURSO DESDE LOS BOTONES ---
+        function seleccionarCurso(nombreCurso) {
+            const selectElement = document.getElementById('programa');
+            if(selectElement) {
+                selectElement.value = nombreCurso;
+            }
+        }
+
+        // --- GESTIÓN DE ENVÍO DE FORMULARIO (LEAD GENERATION) ---
+        function handleFormSubmit(event) {
+            event.preventDefault();
+            
+            const nombre = document.getElementById('nombre').value;
+            const correo = document.getElementById('correo').value;
+            const telefono = document.getElementById('telefono').value;
+            const programa = document.getElementById('programa').value;
+            const mensaje = document.getElementById('mensaje').value;
+            
+            const statusMessage = document.getElementById('form-message');
+            
+            // Construcción del mensaje para WhatsApp de forma automatizada
+            const textoWA = `Hola HINODE AQP! Mi nombre es ${nombre}. Estoy interesado en el curso/programa: ${programa}. Correo: ${correo}, Teléfono: ${telefono}. Notas: ${mensaje}`;
+            const urlWhatsApp = `https://wa.me/51951228830?text=${encodeURIComponent(textoWA)}`;
+            
+            // Mostrar estado de éxito en pantalla
+            statusMessage.className = "form-status success";
+            statusMessage.innerText = "¡Muchas gracias! Redirigiéndote a nuestro WhatsApp para asignarte asesoría...";
+            
+            // Abrir WhatsApp en pestaña nueva simulando el flujo óptimo de conversión
+            setTimeout(() => {
+                window.open(urlWhatsApp, '_blank');
+                document.getElementById('leadForm').reset();
+                statusMessage.style.display = 'none';
+            }, 1500);
+        }
+    </script>
+</body>
+</html>

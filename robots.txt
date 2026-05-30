@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hinodeaqp.netlify.app/sitemap.xml
